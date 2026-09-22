@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yang Zhao | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Yang Zhao, an accounting student at Rutgers Business School." />
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #8b0000;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-card {
+      background: var(--card);
+      padding: 48px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    section {
+      padding: 28px 0 52px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 20px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .skill {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-weight: 600;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--accent);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 0 44px;
+      font-size: 0.95rem;
+    }
+
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .headshot {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .hero-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .headshot {
+        width: 150px;
+        height: 150px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-card {
+        padding: 30px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Yang Zhao</div>
+        <div class="nav-links">
+          <a href="#statement">Statement</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="eyebrow">Personal Portfolio</div>
+            <h1>Yang Zhao</h1>
+            <p class="subtitle">
+              Rutgers Business School accounting student interested in accounting,
+              financial analysis, data-driven decision-making, and practical business problem solving.
+            </p>
+          </div>
+
+          <!-- Upload your photo to GitHub with this exact filename. -->
+          <img class="headshot" src="headshot.jpg" alt="Headshot of Yang Zhao" />
+        </div>
+      </div>
+    </section>
+
+    <section id="statement">
+      <h2>Personal Statement</h2>
+      <div class="panel">
+        <p>
+          I am a Rutgers Business School accounting student focused on building strong
+          accounting, analytical, and business problem-solving skills for a future career in finance and accounting.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="panel">
+        <div class="skills-grid">
+          <div class="skill">Financial Accounting</div>
+          <div class="skill">Managerial Accounting</div>
+          <div class="skill">Financial Analysis</div>
+          <div class="skill">Microsoft Excel</div>
+          <div class="skill">Data Analysis</div>
+          <div class="skill">Business Presentations</div>
+          <div class="skill">Team Collaboration</div>
+          <div class="skill">Problem Solving</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>RU Bus Tracker Project</h3>
+          <p>
+            A team-based business improvement project focused on improving the Rutgers bus
+            experience through a clearer value proposition, process analysis, and efficiency improvements.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Restaurant Management Analysis</h3>
+          <p>
+            Analyzed operational challenges across two restaurant locations, including staffing,
+            customer wait times, service consistency, and opportunities for process improvement.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Financial Analysis Coursework</h3>
+          <p>
+            Applied accounting and finance concepts to business problems involving financial statements,
+            budgeting, valuation, risk, and investment decision-making.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="panel">
+        <p>
+          Interested in accounting, finance, and business opportunities. Connect with me online.
+        </p>
+        <div class="contact-links">
+          <!-- Replace the links below with your real URLs before submitting. -->
+          <a class="button" href="https://www.linkedin.com/in/yang-zhao-373925385" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Yang Zhao. Built for my personal portfolio.
+  </footer>
+</body>
+</html>
